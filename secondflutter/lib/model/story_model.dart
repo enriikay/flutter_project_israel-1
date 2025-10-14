@@ -40,4 +40,33 @@ class StoryModel {
       'isViewed': isViewed,
     };
   }
+
+  factory StoryModel.fromJson(Map<String, dynamic> json) {
+    return StoryModel(
+      id: json['id'],
+      username: json['username'],
+      profileImagePath: json['profileImagePath'],
+      storyImagePath: json['storyImagePath'],
+      timestamp: DateTime.parse(json['timestamp']),
+      isViewed: json['isViewed'],
+    );
+  }
+
+  StoryModel copyWith({
+    String? id,
+    String? username,
+    String? profileImagePath,
+    String? storyImagePath,
+    DateTime? timestamp,
+    bool? isViewed,
+  }) {
+    return StoryModel(
+      id: id ?? this.id,
+      username: username ?? this.username,
+      profileImagePath: profileImagePath ?? this.profileImagePath,
+      storyImagePath: storyImagePath ?? this.storyImagePath,
+      timestamp: timestamp ?? this.timestamp,
+      isViewed: isViewed ?? this.isViewed,
+    );
+  }
 }
