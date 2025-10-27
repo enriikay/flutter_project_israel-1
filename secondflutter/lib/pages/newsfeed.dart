@@ -13,7 +13,7 @@ class _NewsfeedState extends State<Newsfeed> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.pink,
+        backgroundColor: Colors.white,
         title: Image.asset("assets/icon/logo.png", height: 80),
         actions: [
           IconButton(onPressed: () {}, icon: Icon(Icons.search)),
