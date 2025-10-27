@@ -20,9 +20,9 @@ class _MainCustomPageState extends State<MainCustomPage> {
     Newsfeed(),
     FriendsPage(),
     ReelsPage(),
+    MarketplacePage(),
     NotificationsPage(),
     MenuPage(),
-    MarketplacePage(),
   ];
 
   void onItemTapped(int index) {
@@ -38,6 +38,10 @@ class _MainCustomPageState extends State<MainCustomPage> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: selectedIndex,
         onTap: onItemTapped,
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.black,
+        selectedLabelStyle: const TextStyle(color: Colors.black),
+        unselectedLabelStyle: const TextStyle(color: Colors.black),
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: "Friends"),
@@ -46,7 +50,7 @@ class _MainCustomPageState extends State<MainCustomPage> {
             label: "Reels",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.local_convenience_store),
+            icon: Icon(Icons.local_convenience_store_rounded),
             label: "Market",
           ),
           BottomNavigationBarItem(
