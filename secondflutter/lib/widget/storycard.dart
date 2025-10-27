@@ -28,7 +28,7 @@ class StoryCard extends StatelessWidget {
           gradient: story.isViewed
               ? null
               : const LinearGradient(
-                  colors: [Colors.purple, Colors.pink, Colors.orange],
+                  colors: [Colors.purple, Colors.white, Colors.orange],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                 ),
